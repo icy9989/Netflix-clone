@@ -22,8 +22,8 @@ const MovieCard:React.FC<MovieCardProps> = ({ data }) => {
     },[openModal])
 
     const watchMovie = useCallback(() => {
-        router.push(`/watch/${data?.id}`)
-    },[router,data?.id])
+        router.push(`/watch/${data.id}`)
+    },[router,data.id])
 
   return (
     <div className='group w-full h-[12vw] relative'>

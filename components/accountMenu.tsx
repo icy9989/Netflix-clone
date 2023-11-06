@@ -8,11 +8,11 @@ interface AccountMenuProps {
 
 const AccountMenu:React.FC<AccountMenuProps> = ({ visible }) => {
 
+    const { data: currentUser } = useCurrentUser();
+
     if(!visible) {
         return null;
     }
-
-    const { data: currentUser } = useCurrentUser();
 
     return (
         <div className="w-56 bg-black absolute top-14 right-0 py-5 border-2 border-gray-800">
