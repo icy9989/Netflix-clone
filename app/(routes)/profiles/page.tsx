@@ -3,7 +3,6 @@
 import { redirect } from "next/navigation";
 import { useSession } from "next-auth/react";
 
-import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 import useCurrentUser from "@/hooks/useCurrentUser";
 
 import ProfileCard from "./components/profileCard"
