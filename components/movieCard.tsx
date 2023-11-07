@@ -18,12 +18,12 @@ const MovieCard:React.FC<MovieCardProps> = ({ data }) => {
     const { openModal } = useInfoModal();
 
     const handleOpenModal = useCallback(() => {
-        openModal(data?.id);
+        openModal(data.id);
     },[openModal])
 
     const watchMovie = useCallback(() => {
-        router.push(`/watch/${data?.id}`)
-    },[router])
+        router.push(`/watch/${data.id}`)
+    },[router,data.id])
 
   return (
     <div className='group w-full h-[12vw] relative'>
@@ -74,7 +74,7 @@ const MovieCard:React.FC<MovieCardProps> = ({ data }) => {
                         >
                             <AiFillPlayCircle size="90%" />
                         </div>
-                        <FavoriteButton movieId={data?.id} className='w-6 h-6 lg:w-10 lg:h-10' />
+                        <FavoriteButton movieId={data.id} className='w-6 h-6 lg:w-10 lg:h-10' />
                     </div>
                     <div
                         onClick={handleOpenModal}
